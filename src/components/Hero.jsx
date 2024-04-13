@@ -1,4 +1,4 @@
-const Hero = ({title = 'Become a dev', subtitle = 'Find the Job'}) => {
+const Hero = ({title = 'Become a Developer', subtitle = 'Get that job'}) => {
     return (
         <section className='bg-red-800 py-20 mb-4'>
         <div
