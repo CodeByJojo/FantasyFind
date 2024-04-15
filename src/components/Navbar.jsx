@@ -2,7 +2,7 @@ import logo from '../assets/logo-react.svg'
 
 const Navbar = () => {
     return (
-        <nav className='bg-red-800 border-b border-red-800'>
+        <nav className='bg-test border-b border-red-800'>
         <div className='mx-auto max-w-7xl px-2 sm:px-6 lg:px-8'>
           <div className='flex h-20 items-center justify-between'>
             <div

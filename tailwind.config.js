@@ -12,6 +12,10 @@ export default {
       gridTemplateColumns: {
         '70/30': '70% 28%',
       },
+
+      colors: {
+        'test': '#D2CCB1'
+      }
     },
   },
   plugins: [],
