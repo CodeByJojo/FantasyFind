@@ -83,20 +83,6 @@
         "contactEmail": "contact@ipsumlorem.com",
         "contactPhone": "555-555-5555"
       }
-    },
-    {
-      "id": "62c9",
-      "title": "King Coder",
-      "type": "Full-Time",
-      "location": "Everywhere",
-      "description": "Be King of Code!",
-      "salary": "Over $200K",
-      "company": {
-        "name": "The Big One",
-        "description": "We do the best.",
-        "contactEmail": "Joe.maltba@gmail.com",
-        "contactPhone": ""
-      }
     }
   ]
 }
