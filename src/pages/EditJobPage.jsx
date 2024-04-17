@@ -18,6 +18,8 @@ const EditJobPage = ({updateJobSubmit}) => {
     const navigate = useNavigate()
     const {id} = useParams()
 
+    console.log(job.salary, job.type)
+
     const submitForm = (e) => {
         e.preventDefault();
         
