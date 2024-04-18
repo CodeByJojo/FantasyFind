@@ -3,3 +3,4 @@ const Card = ({children, bg = 'bg-grey-100'}) => {
 }
 
 export default Card;
+
