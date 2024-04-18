@@ -27,9 +27,9 @@ const JobListings = ({isHome = false}) => {
     }, [])
 
     return (
-        <section className='bg-amber-50 px-4 py-10'>
+        <section className='bg-slate-50 px-4 py-10'>
         <div className='container-xl lg:container m-auto'>
-          <h2 className='text-3xl font-bold text-amber-500 mb-6 text-center'>
+          <h2 className='text-3xl font-bold text-slate-500 mb-6 text-center'>
             { isHome? 'Recent Jobs' : 'Browse Jobs' }
           </h2>
           

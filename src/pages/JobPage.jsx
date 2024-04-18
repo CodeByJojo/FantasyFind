@@ -26,13 +26,13 @@ const JobPage = ({deleteJob}) => {
       <div className="container m-auto py-6 px-6">
         <Link
           to="/jobs"
-          className="text-red-500 hover:text-red-600 flex items-center">
+          className="text-slate-500 hover:text-slate-600 flex items-center">
           <FaArrowLeft className='mr-2' /> Back to Job Listings
         </Link>
       </div>
     </section>
 
-    <section className="bg-red-50">
+    <section className="bg-slate-50">
       <div className="container m-auto py-10 px-6">
         <div className="grid grid-cols-1 md:grid-cols-70/30 w-full gap-6">
           <main>
@@ -44,13 +44,13 @@ const JobPage = ({deleteJob}) => {
               </h1>
               <div
                 className="text-gray-500 mb-4 flex align-middle justify-center md:justify-start">
-                <FaMapMarker className='mr-1 text-orange-700' />
-                <p className="text-orange-700">{job.location}</p>
+                <FaMapMarker className='mr-1 text-black' />
+                <p className="text-black">{job.location}</p>
               </div>
             </div>
 
             <div className="bg-white p-6 rounded-lg shadow-md mt-6">
-              <h3 className="text-red-800 text-lg font-bold mb-6">
+              <h3 className="text-slate-800 text-lg font-bold mb-6">
                 Job Description
               </h3>
 
@@ -58,7 +58,7 @@ const JobPage = ({deleteJob}) => {
                {job.description}
               </p>
 
-              <h3 className="text-red-800 text-lg font-bold mb-2">Salary</h3>
+              <h3 className="text-slate-800 text-lg font-bold mb-2">Salary</h3>
 
               <p className="mb-4">{job.salary}</p>
             </div>
@@ -80,13 +80,13 @@ const JobPage = ({deleteJob}) => {
 
               <h3 className="text-xl">Contact Email:</h3>
 
-              <p className="my-2 bg-red-100 p-2 font-bold">
+              <p className="my-2 bg-slate-100 p-2 font-bold">
                 {job.company.contactEmail}
               </p>
 
               <h3 className="text-xl">Contact Phone:</h3>
 
-              <p className="my-2 bg-red-100 p-2 font-bold">{job.company.contactPhone}</p>
+              <p className="my-2 bg-slate-100 p-2 font-bold">{job.company.contactPhone}</p>
             </div>
 
            
@@ -94,7 +94,7 @@ const JobPage = ({deleteJob}) => {
               <h3 className="text-xl font-bold mb-6">Manage Job</h3>
               <Link
                 to={`/edit-job/${job.id}`}
-                className="bg-red-500 hover:bg-red-600 text-white text-center font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline mt-4 block"
+                className="bg-slate-500 hover:bg-slate-600 text-white text-center font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline mt-4 block"
                 >Edit Job</Link>
               <button onClick={ () => onDeleteClick(job.id) }className="bg-slate-900 hover:bg-black text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline mt-4 block">
                 Delete Job

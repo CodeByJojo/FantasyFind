@@ -1,11 +1,12 @@
 import { NavLink } from 'react-router-dom';
 import logo from '../assets/logo-react.svg'
+import { FaBookReader} from 'react-icons/fa';
 
 const Navbar = () => {
-  const linkClass = ({ isActive }) => isActive ? 'text-white bg-black hover:bg-gray-900 hover:text-white rounded-md px-3 py-2' : 'text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2';
+  const linkClass = ({ isActive }) => isActive ? 'text-white bg-slate-800 hover:bg-gray-900 hover:text-white rounded-md px-3 py-2' : 'text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2';
 
     return (
-        <nav className='bg-amber-400 border-b border-amber-400'>
+        <nav className='bg-slate-600 border-b border-slate-600'>
         <div className='mx-auto max-w-7xl px-2 sm:px-6 lg:px-8'>
           <div className='flex h-20 items-center justify-between'>
             <div
@@ -13,11 +14,12 @@ const Navbar = () => {
             >
               {/* <!-- Logo --> */}
               <NavLink className='flex flex-shrink-0 items-center mr-4' to='/'>
-                <img
+                {/* <img
                   className='h-10 w-auto'
                   src={logo}
                   alt='React Jobs'
-                />
+                /> */}
+                <FaBookReader className='h-10 w-auto text-white' />
                 <span className='hidden md:block text-white text-2xl font-bold ml-2'
                   >EmployAct</span>
               </NavLink>

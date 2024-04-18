@@ -7,14 +7,17 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Roboto', 'sans-serif']
+        sans: ['Roboto', 'sans-serif'],
+        railway: ['Railway', 'sans-serif']
       },
       gridTemplateColumns: {
         '70/30': '70% 28%',
       },
 
       colors: {
-        'test': '#D2CCB1'
+        'cream': '#D2CCB1',
+        'lightCream':'#f6f5ef',
+        'darkCream': '#7d7969'
       }
     },
   },

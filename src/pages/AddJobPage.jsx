@@ -41,7 +41,7 @@ const AddJobPage = ({addJobSubmit}) => {
 
 
     return (
-        <section className="bg-red-50">
+        <section className="bg-slate-50">
       <div className="container m-auto max-w-2xl py-24">
         <div
           className="bg-white px-6 py-8 mb-4 shadow-md rounded-md border m-4 md:m-0"
@@ -204,7 +204,7 @@ const AddJobPage = ({addJobSubmit}) => {
 
             <div>
               <button
-                className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline"
+                className="bg-slate-500 hover:bg-slate-600 text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline"
                 type="submit">
                 Add Job
               </button>
