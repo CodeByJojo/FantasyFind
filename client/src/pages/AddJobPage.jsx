@@ -10,8 +10,8 @@ const AddJobPage = ({addJobSubmit}) => {
     const [salary, setSalary] = useState('Under $50K');
     const [companyName, setCompanyName] = useState('');
     const [companyDescription, setCompanyDescription] = useState('');
-    const [contactEmail, setContactEmail] = useState('');
-    const [contactPhone, setContactPhone] = useState('');
+    const [companyEmail, setContactEmail] = useState('');
+    const [companyPhone, setContactPhone] = useState('');
 
     const navigate = useNavigate()
 
@@ -19,16 +19,15 @@ const AddJobPage = ({addJobSubmit}) => {
         e.preventDefault();
         
         const newJob = {
-            title,
+            title, 
             type,
             location,
             description,
             salary,
-
             companyName,
             companyDescription,
-            contactEmail,
-            contactPhone,
+            companyEmail,
+            companyPhone,
             
         }
 
@@ -39,7 +38,6 @@ const AddJobPage = ({addJobSubmit}) => {
         return navigate('/jobs')
     }
 
-
     return (
         <section className="bg-slate-50">
       <div className="container m-auto max-w-2xl py-24">
@@ -47,7 +45,7 @@ const AddJobPage = ({addJobSubmit}) => {
           className="bg-white px-6 py-8 mb-4 shadow-md rounded-md border m-4 md:m-0"
         >
           <form onSubmit={submitForm}>
-            <h2 className="text-3xl text-center font-semibold mb-6">Add Job</h2>
+            <h2 className="text-3xl text-center font-semibold mb-6">Add Job 2</h2>
 
             <div className="mb-4">
               <label htmlFor="type" className="block text-gray-700 font-bold mb-2"
@@ -160,8 +158,8 @@ const AddJobPage = ({addJobSubmit}) => {
                 className="block text-gray-700 font-bold mb-2"
                 >Company Description</label>
               <textarea
-                id="company_description"
-                name="company_description"
+                id="companyDescription"
+                name="companyDescription"
                 className="border rounded w-full py-2 px-3"
                 rows="4"
                 placeholder="What does your company do?"
@@ -177,12 +175,12 @@ const AddJobPage = ({addJobSubmit}) => {
                 >Contact Email</label>
               <input
                 type="email"
-                id="contact_email"
-                name="contact_email"
+                id="companyEmail"
+                name="companyEmail"
                 className="border rounded w-full py-2 px-3"
                 placeholder="Email address for applicants"
                 required
-                value={contactEmail}
+                value={companyEmail}
                 onChange={(e) => setContactEmail(e.target.value)}
               />
             </div>
@@ -193,11 +191,11 @@ const AddJobPage = ({addJobSubmit}) => {
                 >Contact Phone</label>
               <input
                 type="tel"
-                id="contact_phone"
-                name="contact_phone"
+                id="companyPhone"
+                name="companyPhone"
                 className="border rounded w-full py-2 px-3"
                 placeholder="Optional phone for applicants"
-                value={contactPhone}
+                value={companyPhone}
                 onChange={(e) => setContactPhone(e.target.value)}
               />
             </div>
@@ -216,4 +214,5 @@ const AddJobPage = ({addJobSubmit}) => {
     )
 }
 
-export default AddJobPage;
+
+export default AddJobPage
