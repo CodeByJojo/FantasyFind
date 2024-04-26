@@ -48,6 +48,7 @@ const App = () => {
     return; 
   }
 
+  //id may or may not need _
 const router = createBrowserRouter(
   createRoutesFromElements(
   <Route path='/' element={<MainLayout />}>
@@ -55,7 +56,7 @@ const router = createBrowserRouter(
     <Route path='/jobs' element={<JobsPage />} />
     <Route path='/add-job' element={<AddJobPage addJobSubmit={addJob} />} />
     <Route path='/edit-job/:id' element={<EditJobPage updateJobSubmit={updateJob}/>} loader ={jobLoader} />
-    <Route path='/job/:id' element={<JobPage deleteJob={deleteJob}/>} loader ={jobLoader} />
+    <Route path='/job/:_id' element={<JobPage deleteJob={deleteJob}/>} loader ={jobLoader} /> 
     <Route path='*' element={<NotFoundPage />} />
   </Route>
   )
