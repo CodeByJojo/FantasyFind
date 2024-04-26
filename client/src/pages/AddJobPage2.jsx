@@ -19,7 +19,7 @@ const AddJobPage2 = ({addJobSubmit}) => {
         e.preventDefault();
         
         const newJob = {
-            title,
+            title, 
             type,
             location,
             description,
