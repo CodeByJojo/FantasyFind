@@ -8,23 +8,20 @@ const JobListings = ({isHome = false}) => {
 
     useEffect(() => {
       const fetchJobs = async () => {
-        const apiUrl = isHome
-        ? 'http://localhost:1212/listing?_limit=1' 
-        : 'http://localhost:1212/listing?_limit=1'
+        const apiUrl = isHome ? '/api/jobs?_limit=2' : 'http://localhost:1212/listing';
         try {
           const res = await fetch(apiUrl);
-        const data = await res.json();
-        setJobs(data);
+          const data = await res.json();
+          setJobs(data);
         } catch (error) {
-          console.log('Error Fetching Data', error)
+          console.log('Error fetching data', error);
         } finally {
           setLoading(false);
         }
-        
-      }
-
+      };
+  
       fetchJobs();
-    }, [])
+    }, []);
 
     return (
         <section className='bg-slate-50 px-4 py-10'>
