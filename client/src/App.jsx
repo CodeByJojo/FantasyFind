@@ -12,8 +12,6 @@ import JobPage, {jobLoader} from './pages/JobPage';
 import AddJobPage from './pages/AddJobPage';
 import EditJobPage from './pages/EditJobPage';
 
-import AddJobPage2 from './pages/AddJobPage2';
-
 
 
 const App = () => {
@@ -30,19 +28,6 @@ const App = () => {
     return;
   }
 
-
-  //Add New Job 2
-  const addJob2 = async (newJob) => {
-    const res = await fetch('http://localhost:1212/listing', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(newJob)
-    })
-    return
-  }
-
   //Delete Job
   const deleteJob = async (id) => {
     const res = await fetch(`http://localhost:1212/listing/${id}`, {
@@ -53,7 +38,7 @@ const App = () => {
 
   //Update Job
   const updateJob = async (job) => {
-    const res = await fetch(`/api/jobs/${job.id}`, {
+    const res = await fetch(`http://localhost:1212/listing/${id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
@@ -69,10 +54,6 @@ const router = createBrowserRouter(
     <Route index element={<HomePage />} />
     <Route path='/jobs' element={<JobsPage />} />
     <Route path='/add-job' element={<AddJobPage addJobSubmit={addJob} />} />
-
-    
-    <Route path='/add-job2' element={<AddJobPage2 addJobSubmit={addJob2} />} />
-
     <Route path='/edit-job/:id' element={<EditJobPage updateJobSubmit={updateJob}/>} loader ={jobLoader} />
     <Route path='/jobs/:id' element={<JobPage deleteJob={deleteJob}/>} loader ={jobLoader} />
     <Route path='*' element={<NotFoundPage />} />
