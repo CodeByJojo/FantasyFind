@@ -1,9 +1,5 @@
 import {MongoClient, ServerApiVersion} from 'mongodb'
 
-// import dotenv from 'dotenv'
-// dotenv.config()
-
-// import 'dotenv/config'
 
 
 const uri = process.env.DB_STRING

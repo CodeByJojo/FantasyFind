@@ -31,7 +31,7 @@ router.post('/', async (req, res) => {
     try {
         let newDocument = {
             type: req.body.type,
-            listingName: req.body.listingName,
+            title: req.body.title,
             description: req.body.description,
             salary: req.body.salary,
             location: req.body.location,
@@ -56,7 +56,7 @@ router.patch('/:id', async (req, res) => {
         const updates = {
             $set: {
                 type: req.body.type,
-                listingName: req.body.listingName,
+                title: req.body.title,
                 description: req.body.description,
                 salary: req.body.salary,
                 location: req.body.location,
