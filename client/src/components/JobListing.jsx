@@ -33,7 +33,7 @@ const JobListing = ({job}) => {
                     {job.location}
                   </div>
                   <Link
-                    to={`http://localhost:1212/listing/${job.id}`}
+                    to={`http://localhost:1212/job/${job._id}`} //maybe change this
                     className='h-[36px] bg-slate-500 hover:bg-slate-600 text-white px-4 py-2 rounded-lg text-center text-sm'
                   >
                   Read More

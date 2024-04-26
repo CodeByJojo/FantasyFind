@@ -24,18 +24,16 @@ const EditJobPage = ({updateJobSubmit}) => {
         e.preventDefault();
         
         const updatedJob = {
-            id,
-            title,
+            id, //maybe change this
+            title, 
             type,
             location,
             description,
             salary,
-            company: {
-                name: companyName,
-                description: companyDescription,
-                contactEmail,
-                contactPhone,
-            }
+            companyName,
+            companyDescription,
+            companyEmail,
+            companyPhone,
         }
 
         updateJobSubmit(updatedJob)

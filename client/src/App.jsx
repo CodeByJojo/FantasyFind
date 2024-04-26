@@ -18,7 +18,7 @@ const App = () => {
 
   // Add New Job
   const addJob = async (newJob) => {
-    const res = await fetch('http://localhost:1212/listing', {
+    const res = await fetch('http://localhost:1212/job', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -30,7 +30,7 @@ const App = () => {
 
   //Delete Job
   const deleteJob = async (id) => {
-    const res = await fetch(`http://localhost:1212/listing/${id}`, {
+    const res = await fetch(`http://localhost:1212/job/${id}`, {
       method: 'Delete'
     })
     return;
@@ -38,7 +38,7 @@ const App = () => {
 
   //Update Job
   const updateJob = async (job) => {
-    const res = await fetch(`http://localhost:1212/listing/${id}`, {
+    const res = await fetch(`http://localhost:1212/job/${id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
@@ -55,7 +55,7 @@ const router = createBrowserRouter(
     <Route path='/jobs' element={<JobsPage />} />
     <Route path='/add-job' element={<AddJobPage addJobSubmit={addJob} />} />
     <Route path='/edit-job/:id' element={<EditJobPage updateJobSubmit={updateJob}/>} loader ={jobLoader} />
-    <Route path='/jobs/:id' element={<JobPage deleteJob={deleteJob}/>} loader ={jobLoader} />
+    <Route path='/job/:id' element={<JobPage deleteJob={deleteJob}/>} loader ={jobLoader} />
     <Route path='*' element={<NotFoundPage />} />
   </Route>
   )

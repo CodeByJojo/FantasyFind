@@ -23,6 +23,6 @@ try {
     console.error(err)
 }
 
-let db = client.db('listing') //mern has this as: employees
+let db = client.db('listings') //mern has this as: employees
 
 export default db
