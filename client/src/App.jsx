@@ -55,8 +55,8 @@ const router = createBrowserRouter(
     <Route index element={<HomePage />} />
     <Route path='/jobs' element={<JobsPage />} />
     <Route path='/add-job' element={<AddJobPage addJobSubmit={addJob} />} />
-    <Route path='/edit-job/:id' element={<EditJobPage updateJobSubmit={updateJob}/>} loader ={jobLoader} />
-    <Route path='/job/:_id' element={<JobPage deleteJob={deleteJob}/>} loader ={jobLoader} /> 
+    <Route path='/edit-jobs/:id' element={<EditJobPage updateJobSubmit={updateJob}/>} loader ={jobLoader} />
+    <Route path='/jobs/:id' element={<JobPage deleteJob={deleteJob}/>} loader ={jobLoader} /> 
     <Route path='*' element={<NotFoundPage />} />
   </Route>
   )

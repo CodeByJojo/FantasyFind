@@ -10,10 +10,10 @@ const EditJobPage = ({updateJobSubmit}) => {
     const [location, setLocation] = useState(job.location);
     const [description, setDescription] = useState(job.description);
     const [salary, setSalary] = useState(job.salary);
-    const [companyName, setCompanyName] = useState(job.company.name);
-    const [companyDescription, setCompanyDescription] = useState(job.company.description);
-    const [contactEmail, setContactEmail] = useState(job.company.contactEmail);
-    const [contactPhone, setContactPhone] = useState(job.company.contactPhone);
+    const [companyName, setCompanyName] = useState(job.companyName);
+    const [companyDescription, setCompanyDescription] = useState(job.companyDescription);
+    const [contactEmail, setContactEmail] = useState(job.companyEmail);
+    const [contactPhone, setContactPhone] = useState(job.companyPhone);
 
     const navigate = useNavigate()
     const {id} = useParams()
@@ -180,8 +180,8 @@ const EditJobPage = ({updateJobSubmit}) => {
                   >Contact Email</label>
                 <input
                   type="email"
-                  id="contact_email"
-                  name="contact_email"
+                  id="companyEmail"
+                  name="companyEmail"
                   className="border rounded w-full py-2 px-3"
                   placeholder="Email address for applicants"
                   required
@@ -196,8 +196,8 @@ const EditJobPage = ({updateJobSubmit}) => {
                   >Contact Phone</label>
                 <input
                   type="tel"
-                  id="contact_phone"
-                  name="contact_phone"
+                  id="companyPhone"
+                  name="companyPhone"
                   className="border rounded w-full py-2 px-3"
                   placeholder="Optional phone for applicants"
                   value={contactPhone}
