@@ -96,7 +96,7 @@ const JobPage = ({deleteJob}) => {
                 to={`/edit-jobs/${job._id}`} //Maybe change this
                 className="bg-slate-500 hover:bg-slate-600 text-white text-center font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline mt-4 block"
                 >Edit Job</Link>
-              <button onClick={ () => onDeleteClick(job.id) }className="bg-slate-900 hover:bg-black text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline mt-4 block">
+              <button onClick={ () => onDeleteClick(job._id) }className="bg-slate-900 hover:bg-black text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline mt-4 block">
                 Delete Job
               </button>
             </div>

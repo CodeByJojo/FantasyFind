@@ -4,7 +4,6 @@ import { toast } from 'react-toastify';
 
 const EditJobPage = ({updateJobSubmit}) => {
     const job = useLoaderData()
-
     const [title, setTitle] = useState(job.title);
     const [type, setType] = useState(job.type);
     const [location, setLocation] = useState(job.location);
@@ -40,7 +39,7 @@ const EditJobPage = ({updateJobSubmit}) => {
 
         toast.success('Job Updated')
 
-        return navigate(`/jobs/${id}`)
+        return navigate(`/jobs/${job._id}`)
     }
 
     return (
@@ -148,8 +147,8 @@ const EditJobPage = ({updateJobSubmit}) => {
                   >Company Name</label>
                 <input
                   type="text"
-                  id="company"
-                  name="company"
+                  id="companyName"
+                  name="companyName"
                   className="border rounded w-full py-2 px-3"
                   placeholder="Company Name"
                   value={companyName}
@@ -163,8 +162,8 @@ const EditJobPage = ({updateJobSubmit}) => {
                   className="block text-gray-700 font-bold mb-2"
                   >Company Description</label>
                 <textarea
-                  id="company_description"
-                  name="company_description"
+                  id="companyDescription"
+                  name="companyDescription"
                   className="border rounded w-full py-2 px-3"
                   rows="4"
                   placeholder="What does your company do?"
