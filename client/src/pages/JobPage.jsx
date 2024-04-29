@@ -93,7 +93,7 @@ const JobPage = ({deleteJob}) => {
             <div className="bg-white p-6 rounded-lg shadow-md mt-6">
               <h3 className="text-xl font-bold mb-6">Manage Job</h3>
               <Link
-                to={`/edit-jobs/${job._id}`} //Maybe change this
+                to={`/edit-job/${job._id}`} //Maybe change this
                 className="bg-slate-500 hover:bg-slate-600 text-white text-center font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline mt-4 block"
                 >Edit Job</Link>
               <button onClick={ () => onDeleteClick(job._id) }className="bg-slate-900 hover:bg-black text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline mt-4 block">
@@ -110,7 +110,7 @@ const JobPage = ({deleteJob}) => {
 
 const jobLoader = async ({params}) => {
   // const res = await fetch(`/api/jobs/${params.id}`)
-  const res = await fetch(`http://localhost:1212/job/${params.id}`) //maybe change this
+  const res = await fetch(`http://localhost:1212/jobs/${params.id}`) //maybe change this
   const data = await res.json()
   console.log('working bro')
   return data

@@ -23,7 +23,7 @@ const EditJobPage = ({updateJobSubmit}) => {
         e.preventDefault();
         
         const updatedJob = {
-            id, //maybe change this
+             //maybe change this
             title, 
             type,
             location,
@@ -39,7 +39,7 @@ const EditJobPage = ({updateJobSubmit}) => {
 
         toast.success('Job Updated')
 
-        return navigate(`/jobs/${job._id}`)
+        return navigate(`/jobs/${id}`)
     }
 
     return (
