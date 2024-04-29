@@ -10,7 +10,7 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
-app.use('/job', jobs)
+app.use('/jobs', jobs)
 
 app.listen(PORT, () => {
     console.log(`${PORT} is on and listening`)
