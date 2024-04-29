@@ -11,19 +11,17 @@ const EditJobPage = ({updateJobSubmit}) => {
     const [salary, setSalary] = useState(job.salary);
     const [companyName, setCompanyName] = useState(job.companyName);
     const [companyDescription, setCompanyDescription] = useState(job.companyDescription);
-    const [contactEmail, setContactEmail] = useState(job.companyEmail);
-    const [contactPhone, setContactPhone] = useState(job.companyPhone);
+    const [companyEmail, setContactEmail] = useState(job.companyEmail);
+    const [companyPhone, setContactPhone] = useState(job.companyPhone);
 
     const navigate = useNavigate()
     const {id} = useParams()
-
-    console.log(job.salary, job.type)
 
     const submitForm = (e) => {
         e.preventDefault();
         
         const updatedJob = {
-             //maybe change this
+            id,
             title, 
             type,
             location,
@@ -184,7 +182,7 @@ const EditJobPage = ({updateJobSubmit}) => {
                   className="border rounded w-full py-2 px-3"
                   placeholder="Email address for applicants"
                   required
-                  value={contactEmail}
+                  value={companyEmail}
                   onChange={(e) => setContactEmail(e.target.value)}
                 />
               </div>
@@ -199,7 +197,7 @@ const EditJobPage = ({updateJobSubmit}) => {
                   name="companyPhone"
                   className="border rounded w-full py-2 px-3"
                   placeholder="Optional phone for applicants"
-                  value={contactPhone}
+                  value={companyPhone}
                   onChange={(e) => setContactPhone(e.target.value)}
                 />
               </div>
