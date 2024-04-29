@@ -11,14 +11,14 @@ const router = express.Router()
 
 //Get all listings
 router.get('/', async (req, res) => {
-    let collection = await db.collection('listings')
+    let collection = await db.collection('jobs')
     let results = await collection.find({}).toArray()
     res.send(results).status(200)
 })
 
 //Get a single listing ID
 router.get('/:id', async (req, res) => {
-    let collection = await db.collection('listings')
+    let collection = await db.collection('jobs')
     let query = { _id: new ObjectId(req.params.id) }
     let result = await collection.findOne(query)
 
@@ -40,7 +40,7 @@ router.post('/', async (req, res) => {
             companyEmail: req.body.companyEmail,
             companyPhone: req.body.companyPhone,
         }
-        let collection = await db.collection('listings')
+        let collection = await db.collection('jobs')
         let result = await collection.insertOne(newDocument)
         res.send(result).status(202)
     } catch (err) {
@@ -67,9 +67,9 @@ router.patch('/:id', async (req, res) => {
             },
         }
 
-        let collection = await db.collection('listings')
+        let collection = await db.collection('jobs')
         let result = await collection.updateOne(query, updates)
-        res.send(results).status(200)
+        res.send(result).status(200)
     } catch (err) {
         console.error(err)
         res.status(500).send('Error Updating Listing')
@@ -81,7 +81,7 @@ router.delete('/:id', async (req, res) => {
     try {
         const query = { _id: new ObjectId(req.params.id) }
 
-        const collection = db.collection('listings')
+        const collection = db.collection('jobs')
         let result = await collection.deleteOne(query)
 
         res.send(result).status(200)

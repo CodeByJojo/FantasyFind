@@ -4,38 +4,33 @@ import { toast } from 'react-toastify';
 
 const EditJobPage = ({updateJobSubmit}) => {
     const job = useLoaderData()
-
     const [title, setTitle] = useState(job.title);
     const [type, setType] = useState(job.type);
     const [location, setLocation] = useState(job.location);
     const [description, setDescription] = useState(job.description);
     const [salary, setSalary] = useState(job.salary);
-    const [companyName, setCompanyName] = useState(job.company.name);
-    const [companyDescription, setCompanyDescription] = useState(job.company.description);
-    const [contactEmail, setContactEmail] = useState(job.company.contactEmail);
-    const [contactPhone, setContactPhone] = useState(job.company.contactPhone);
+    const [companyName, setCompanyName] = useState(job.companyName);
+    const [companyDescription, setCompanyDescription] = useState(job.companyDescription);
+    const [companyEmail, setContactEmail] = useState(job.companyEmail);
+    const [companyPhone, setContactPhone] = useState(job.companyPhone);
 
     const navigate = useNavigate()
     const {id} = useParams()
-
-    console.log(job.salary, job.type)
 
     const submitForm = (e) => {
         e.preventDefault();
         
         const updatedJob = {
             id,
-            title,
+            title, 
             type,
             location,
             description,
             salary,
-            company: {
-                name: companyName,
-                description: companyDescription,
-                contactEmail,
-                contactPhone,
-            }
+            companyName,
+            companyDescription,
+            companyEmail,
+            companyPhone,
         }
 
         updateJobSubmit(updatedJob)
@@ -150,8 +145,8 @@ const EditJobPage = ({updateJobSubmit}) => {
                   >Company Name</label>
                 <input
                   type="text"
-                  id="company"
-                  name="company"
+                  id="companyName"
+                  name="companyName"
                   className="border rounded w-full py-2 px-3"
                   placeholder="Company Name"
                   value={companyName}
@@ -165,8 +160,8 @@ const EditJobPage = ({updateJobSubmit}) => {
                   className="block text-gray-700 font-bold mb-2"
                   >Company Description</label>
                 <textarea
-                  id="company_description"
-                  name="company_description"
+                  id="companyDescription"
+                  name="companyDescription"
                   className="border rounded w-full py-2 px-3"
                   rows="4"
                   placeholder="What does your company do?"
@@ -182,12 +177,12 @@ const EditJobPage = ({updateJobSubmit}) => {
                   >Contact Email</label>
                 <input
                   type="email"
-                  id="contact_email"
-                  name="contact_email"
+                  id="companyEmail"
+                  name="companyEmail"
                   className="border rounded w-full py-2 px-3"
                   placeholder="Email address for applicants"
                   required
-                  value={contactEmail}
+                  value={companyEmail}
                   onChange={(e) => setContactEmail(e.target.value)}
                 />
               </div>
@@ -198,11 +193,11 @@ const EditJobPage = ({updateJobSubmit}) => {
                   >Contact Phone</label>
                 <input
                   type="tel"
-                  id="contact_phone"
-                  name="contact_phone"
+                  id="companyPhone"
+                  name="companyPhone"
                   className="border rounded w-full py-2 px-3"
                   placeholder="Optional phone for applicants"
-                  value={contactPhone}
+                  value={companyPhone}
                   onChange={(e) => setContactPhone(e.target.value)}
                 />
               </div>
