@@ -6,11 +6,10 @@ const JobListings = ({isHome = false}) => {
     const [jobs, setJobs] = useState([]);
     const [loading, setLoading] = useState(true);
 
-    // '/api/jobs?_limit=2'
     useEffect(() => {
       const fetchJobs = async () => {
         const apiUrl = isHome ? 
-        'http://localhost:1212/jobs?_limit=1' :
+        'http://localhost:1212/jobs' :
         'http://localhost:1212/jobs';
         try {
           const res = await fetch(apiUrl);

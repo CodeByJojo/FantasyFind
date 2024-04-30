@@ -1,5 +1,4 @@
 import { NavLink } from 'react-router-dom';
-import logo from '../assets/logo-react.svg'
 import { FaBookReader} from 'react-icons/fa';
 
 const Navbar = () => {
@@ -14,11 +13,6 @@ const Navbar = () => {
             >
               {/* <!-- Logo --> */}
               <NavLink className='flex flex-shrink-0 items-center mr-4' to='/'>
-                {/* <img
-                  className='h-10 w-auto'
-                  src={logo}
-                  alt='React Jobs'
-                /> */}
                 <FaBookReader className='h-10 w-auto text-white' />
                 <span className='hidden md:block text-white text-2xl font-bold ml-2'
                   >EmployAct</span>

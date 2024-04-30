@@ -48,7 +48,7 @@ const App = () => {
     return; 
   }
 
-  //id may or may not need _
+
 const router = createBrowserRouter(
   createRoutesFromElements(
   <Route path='/' element={<MainLayout />}>

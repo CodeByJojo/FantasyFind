@@ -10,6 +10,7 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
+// '/jobs' = route to use
 app.use('/jobs', jobs)
 
 app.listen(PORT, () => {
