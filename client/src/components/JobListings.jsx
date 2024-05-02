@@ -1,4 +1,4 @@
-import { useState, useEffect} from 'react'
+import { useState, useEffect } from 'react'
 import JobListing from './JobListing'
 import Spinner from './Spinner';
 
