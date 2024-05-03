@@ -38,6 +38,8 @@ const EditJobPage = ({updateJobSubmit}) => {
         toast.success('Job Updated')
 
         return navigate(`/jobs/${id}`)
+
+        
     }
 
     return (
