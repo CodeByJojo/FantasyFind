@@ -109,7 +109,7 @@ const JobPage = ({deleteJob}) => {
 }
 
 const jobLoader = async ({params}) => {
-  const res = await fetch(`http://localhost:1212/jobs/${params.id}`)
+  const res = await fetch(`https://employact-production.up.railway.app/jobs/${params.id}`)
   const data = await res.json()
   console.log('working bro')
   return data
