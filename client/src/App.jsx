@@ -12,13 +12,13 @@ import JobPage, {jobLoader} from './pages/JobPage';
 import AddJobPage from './pages/AddJobPage';
 import EditJobPage from './pages/EditJobPage';
 
-
+//strt
 
 const App = () => {
 
   // Add New Job
   const addJob = async (newJob) => {
-    const res = await fetch('http://localhost:1212/jobs', {
+    const res = await fetch('https://employact-production.up.railway.app/jobs', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -30,7 +30,7 @@ const App = () => {
 
   //Delete Job
   const deleteJob = async (id) => {
-    const res = await fetch(`http://localhost:1212/jobs/${id}`, {
+    const res = await fetch(`https://employact-production.up.railway.app/jobs/${id}`, {
       method: 'DELETE'
     })
     return;
@@ -38,7 +38,7 @@ const App = () => {
 
   //Update Job
   const updateJob = async (job) => {
-    const res = await fetch(`http://localhost:1212/jobs/${job.id}`, { //Maybe change this
+    const res = await fetch(`https://employact-production.up.railway.app/jobs/${job.id}`, { //Maybe change this
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json'
