@@ -9,8 +9,8 @@ const JobListings = ({isHome = false}) => {
     useEffect(() => {
       const fetchJobs = async () => {
         const apiUrl = isHome ? 
-        'https://employact-production.up.railway.app/jobs' :
-        'https://employact-production.up.railway.app/jobs';
+        'http://localhost:1212/jobs' :
+        'http://localhost:1212/jobs';
         try {
           const res = await fetch(apiUrl);
           const data = await res.json();
