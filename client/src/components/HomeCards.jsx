@@ -9,13 +9,13 @@ const HomeCards = () => {
             <Card>
             <h2 className='text-2xl font-bold'>For Developers</h2>
               <p className='mt-2 mb-4'>
-                Browse our jobs and start your career today
+                Browse our listings and start your career today
               </p>
               <Link
                 to='/jobs'
                 className='inline-block bg-slate-800 text-white rounded-lg px-4 py-2 hover:bg-gray-700'
               >
-                Browse Jobs
+                Browse Listings
               </Link>
             </Card>
             <Card bg='bg-slate-200'>

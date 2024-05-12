@@ -6,7 +6,7 @@ const ViewAllJobs = () => {
       <Link
         to='/jobs'
         className='block bg-slate-800 text-white text-center py-4 px-6 rounded-xl hover:bg-gray-700'
-        >View All Jobs</Link>
+        >View All Listings</Link>
     </section>
     )
 }

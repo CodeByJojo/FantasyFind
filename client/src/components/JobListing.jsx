@@ -1,5 +1,6 @@
 import {useState} from 'react';
 import {FaMapMarker} from 'react-icons/fa'
+import { FaClock } from 'react-icons/fa';
 import { Link } from 'react-router-dom'
 
 const JobListing = ({job}) => {
@@ -8,7 +9,7 @@ const JobListing = ({job}) => {
   let description = job.description;
 
   if(!showFullDescription) {
-    description = description.substring(0, 90) + '...';1
+    description = description.substring(0, 50) + '...';1
   }
 
     return (
@@ -29,7 +30,7 @@ const JobListing = ({job}) => {
 
                 <div className='flex flex-col lg:flex-row justify-between mb-4'>
                   <div className='text-black mb-3'>
-                    <FaMapMarker className='inline text-lg mb-1 mr-1' />
+                    <FaClock className='inline text-lg mb-1 mr-1' />
                     {job.location}
                   </div>
                   <Link
