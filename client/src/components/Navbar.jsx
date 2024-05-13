@@ -15,8 +15,9 @@ const Navbar = () => {
               {/* <!-- Logo --> */}
               <NavLink className='flex flex-shrink-0 items-center mr-4' to='/'>
                 <FaDragon className='h-10 w-auto text-white' />
+                  
                 <span className='hidden md:block text-white text-2xl font-bold ml-2'
-                  ></span>
+                  >Fantasy Find</span>
               </NavLink>
               <div className='md:ml-auto'>
                 <div className='flex space-x-2'>
@@ -25,11 +26,11 @@ const Navbar = () => {
                     className={ linkClass }
                     >Home</NavLink>
                   <NavLink
-                    to='/jobs'
+                    to='/listings'
                     className={ linkClass }
                     >Listings</NavLink>
                   <NavLink
-                    to='/add-job'
+                    to='/add-listing'
                     className={ linkClass }
                     >Add Listing</NavLink>
                 </div>
