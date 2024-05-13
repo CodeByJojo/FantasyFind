@@ -18,7 +18,7 @@ const App = () => {
 
   // Add New Listing fantasyfind-server.up.railway.app
   const addListing = async (newListing) => {
-    const res = await fetch('http://fantasyfind-server.up.railway.app/listings', {
+    const res = await fetch('https://fantasyfind-server.up.railway.app/listings', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -30,7 +30,7 @@ const App = () => {
 
   //Delete Listing
   const deleteListing = async (id) => {
-    const res = await fetch(`http://fantasyfind-server.up.railway.app/listings/${id}`, {
+    const res = await fetch(`https://fantasyfind-server.up.railway.app/listings/${id}`, {
       method: 'DELETE'
     })
     return;
@@ -38,7 +38,7 @@ const App = () => {
 
   //Update Listing
   const updateListing = async (listing) => {
-    const res = await fetch(`http://fantasyfind-server.up.railway.app/listings/${listing.id}`, { //Maybe change this
+    const res = await fetch(`https://fantasyfind-server.up.railway.app/listings/${listing.id}`, { //Maybe change this
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json'

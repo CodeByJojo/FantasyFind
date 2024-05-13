@@ -9,8 +9,8 @@ const Listings = ({isHome = false}) => {
     useEffect(() => {
       const fetchListings = async () => {
         const apiUrl = isHome ? 
-        'http://fantasyfind-server.up.railway.app/listings' :
-        'http://fantasyfind-server.up.railway.app/listings';
+        'https://fantasyfind-server.up.railway.app/listings' :
+        'https://fantasyfind-server.up.railway.app/listings';
         try {
           const res = await fetch(apiUrl);
           const data = await res.json();

@@ -108,7 +108,7 @@ const ListingPage = ({deleteListing}) => {
 }
 
 const listingLoader = async ({params}) => {
-  const res = await fetch(`http://fantasyfind-server.up.railway.app/listings/${params.id}`)
+  const res = await fetch(`https://fantasyfind-server.up.railway.app/listings/${params.id}`)
   const data = await res.json()
   console.log('working bro')
   return data

@@ -1,7 +1,7 @@
 {
-  "name": "employact",
+  "name": "fantasyfind",
   "version": "1.0.0",
-  "description": "Find a job, get a job",
+  "description": "",
   "main": "server.js",
   "type": "module",
   "scripts": {
