@@ -1,7 +1,7 @@
 import express from 'express'
 import 'dotenv/config'
 import cors from 'cors'
-import jobs from './routes/jobRoute.js'
+import listing from './routes/jobRoute.js'
 
 
 const PORT = process.env.PORT
@@ -11,7 +11,7 @@ app.use(cors())
 app.use(express.json())
 
 // '/jobs' = route to use
-app.use('/jobs', jobs)
+app.use('/listings', listing)
 
 app.listen(PORT, () => {
     console.log(`${PORT} is on and listening`)

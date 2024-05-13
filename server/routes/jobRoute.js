@@ -11,14 +11,14 @@ const router = express.Router()
 
 //Get all jobs
 router.get('/', async (req, res) => {
-    let collection = await db.collection('jobs')
+    let collection = await db.collection('listing')
     let results = await collection.find({}).toArray()
     res.send(results).status(200)
 })
 
 //Get a single job ID
 router.get('/:id', async (req, res) => {
-    let collection = await db.collection('jobs')
+    let collection = await db.collection('listing')
     let query = { _id: new ObjectId(req.params.id) }
     let result = await collection.findOne(query)
 
@@ -33,14 +33,13 @@ router.post('/', async (req, res) => {
             type: req.body.type,
             title: req.body.title,
             description: req.body.description,
-            salary: req.body.salary,
-            location: req.body.location,
-            companyName: req.body.companyName,
-            companyDescription: req.body.companyDescription,
-            companyEmail: req.body.companyEmail,
-            companyPhone: req.body.companyPhone,
+            game: req.body.game,
+            time: req.body.time,
+            playerName: req.body.playerName,
+            email: req.body.email,
+            discord: req.body.discord,
         }
-        let collection = await db.collection('jobs')
+        let collection = await db.collection('listing')
         let result = await collection.insertOne(newDocument)
         res.send(result).status(202)
     } catch (err) {
@@ -58,16 +57,15 @@ router.patch('/:id', async (req, res) => {
                 type: req.body.type,
                 title: req.body.title,
                 description: req.body.description,
-                salary: req.body.salary,
-                location: req.body.location,
-                companyName: req.body.companyName,
-                companyDescription: req.body.companyDescription,
-                companyEmail: req.body.companyEmail,
-                companyPhone: req.body.companyPhone,
+                game: req.body.game,
+                time: req.body.time,
+                playerName: req.body.playerName,
+                email: req.body.email,
+                discord: req.body.discord,
             },
         }
 
-        let collection = await db.collection('jobs')
+        let collection = await db.collection('listing')
         let result = await collection.updateOne(query, updates)
         res.send(result).status(200)
     } catch (err) {
@@ -81,7 +79,7 @@ router.delete('/:id', async (req, res) => {
     try {
         const query = { _id: new ObjectId(req.params.id) }
 
-        const collection = db.collection('jobs')
+        const collection = db.collection('listing')
         let result = await collection.deleteOne(query)
 
         res.send(result).status(200)
