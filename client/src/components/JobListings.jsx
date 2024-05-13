@@ -21,7 +21,7 @@ const JobListings = ({isHome = false}) => {
           setLoading(false);
         }
       };
-  
+      // 'https://employact-production.up.railway.app/jobs'
       fetchJobs();
     }, []);
 

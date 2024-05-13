@@ -16,6 +16,7 @@ import EditJobPage from './pages/EditJobPage';
 
 const App = () => {
 
+  // https://employact-production.up.railway.app/jobs
   // Add New Job
   const addJob = async (newJob) => {
     const res = await fetch('https://employact-production.up.railway.app/jobs', {

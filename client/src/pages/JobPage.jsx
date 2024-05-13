@@ -108,6 +108,7 @@ const JobPage = ({deleteJob}) => {
     )
 }
 
+// (`https://employact-production.up.railway.app/jobs/${params.id}`)
 const jobLoader = async ({params}) => {
   const res = await fetch(`https://employact-production.up.railway.app/jobs/${params.id}`)
   const data = await res.json()
